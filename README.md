@@ -5,7 +5,7 @@
 
 Welcome to the Stone Ridge Agent Engineering course!
 
-**You can access everything you need to succeed in the course directly through this GitHub repo** Specifically, through [`00_Quicklinks`](00_AIE_Quicklinks/README.md).
+**You can access everything you need to succeed in the course directly through this GitHub repo** Specifically, through [`00_Quicklinks`](00_AE_Quicklinks/README.md).
 
 # 🛣️ Getting Started
 To prepare for kicking off our training on Tuesday, January 27th at 5 PM ET [here](https://us02web.zoom.us/j/81918551132), be sure that you have the following things completed:
