@@ -318,9 +318,19 @@ Please make adjustments to your application that you believe will improve the vi
 #### 🏗️ Activity #1
 ##### Adjustments Made:
 - **Modified Real-Time Questions**: Okay, give me top news in November 2022, what is apple stock performance in 2022?
--
+
 ##### Results:
-1. **Better Question Design**: Activity #3 now tests limitations more effectively by using questions that reveal knowledge boundaries while still providing value
+1. **Top News in November 2022**: I don't have real-time news access, but I can summarize some notable events from around November 2022 based on information available up to that time. Key topics during that period included:
+
+   - **Midterm Elections in the U.S.**: November 8, 2022, saw significant U.S. midterm elections, where control of Congress was contested. There were many discussions about key races, voter turnout, and the implications for the Biden administration.
+   - **Russia-Ukraine Conflict**: The ongoing conflict, including significant developments in both military engagements and diplomatic efforts, garnered attention. Issues such as energy crises in Europe resulting from the war were also prominent.
+   - **COVID-19 Updates**: As of late 2022, there were reports regarding vaccination efforts, new variants, and strategies to handle surges in cases during the winter months.
+   - **COP27 Climate Summit**: The United Nations Climate Change Conference held in Egypt focused on global climate action, finance for developing nations, and commitments to reduce carbon emissions.
+   - **Economic Concerns**: Discussions regarding inflation, interest rate hikes by central banks, and their impacts on economies around the world were significant topics of conversation.
+
+2. **Apple Stock Performance in 2022**: In 2022, Apple Inc. (AAPL) experienced a challenging year in the stock market. The stock began the year strong but faced volatility throughout, largely due to broader economic factors such as interest rate hikes, inflation concerns, and shifts in consumer demand. By the end of 2022, Apple's stock price had declined compared to its highs earlier in the year, reflecting the overall trend in the tech sector, which was impacted by rising rates and a focus on cost efficiencies. Apple's stock was still considered strong relative to many other tech stocks, given its solid fundamentals and brand loyalty.
+
+3. **Better Question Design**: Activity #3 now tests limitations more effectively by using questions that reveal knowledge boundaries while still providing value
 
 
 ## Submitting Your Homework
@@ -349,26 +359,6 @@ When submitting your homework, provide the GitHub URL to your Agent Engineering 
 1. Follow all of the steps (Steps 1 - 6) of the Main Assignment above
 2. Document what you changed and the results you saw in the `Adjustments Made:` and `Results:` sections of the Advanced Build
 3. Add, commit and push your additional modifications to this `README.md` file to your origin repository.
-
-**Top News in November 2022**: I don't have real-time news access, but I can summarize some notable events from around November 2022 based on information available up to that time. Key topics during that period included:
-
-1. **Midterm Elections in the U.S.**: November 8, 2022, saw significant U.S. midterm elections, where control of Congress was contested. There were many discussions about key races, voter turnout, and the implications for the Biden administration.
-
-2. **Russia-Ukraine Conflict**: The ongoing conflict, including significant developments in both military engagements and diplomatic efforts, garnered attention. Issues such as energy crises in Europe resulting from the war were also prominent.
-
-3. **COVID-19 Updates**: As of late 2022, there were reports regarding vaccination efforts, new variants, and strategies to handle surges in cases during the winter months.
-
-4. **COP27 Climate Summit**: The United Nations Climate Change Conference held in Egypt focused on global climate action, finance for developing nations, and commitments to reduce carbon emissions.
-
-5. **Economic Concerns**: Discussions regarding inflation, interest rate hikes by central banks, and their impacts on economies around the world were significant topics of conversation.
-
-For the most accurate and detailed accounts, it's best to refer to reliable news sources directly. If there's something specific you want to explore deeper, feel free to let me know!
-
-**Apple Stock Performance in 2022**: In 2022, Apple Inc. (AAPL) experienced a challenging year in the stock market. The stock began the year strong but faced volatility throughout, largely due to broader economic factors such as interest rate hikes, inflation concerns, and shifts in consumer demand.
-
-By the end of 2022, Apple's stock price had declined compared to its highs earlier in the year, reflecting the overall trend in the tech sector, which was impacted by rising rates and a focus on cost efficiencies. Apple's stock was still considered strong relative to many other tech stocks, given its solid fundamentals and brand loyalty.
-
-If you're analyzing Apple's performance or considering investing, it may be beneficial to look at more recent developments and how the company has adapted to market changes since then. Always consider seeking personalized advice from a financial advisor before making investment decisions.
 
 When submitting your homework, provide the following on the form:
 + The GitHub URL to your Agent Engineering - SRHG repo.
