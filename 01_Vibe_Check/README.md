@@ -44,21 +44,98 @@ You will be required to submit a link to your GitHub, as well as screenshots of 
 
 Please evaluate your system on the following questions:
 
-1. Explain the concept of object-oriented programming in simple terms to a complete beginner.
-    - Aspect Tested:
-2. Read the following paragraph and provide a concise summary of the key points…
-    - Aspect Tested:
-3. Write a short, imaginative story (100–150 words) about a robot finding friendship in an unexpected place.
-    - Aspect Tested:
-4. If a store sells apples in packs of 4 and oranges in packs of 3, how many packs of each do I need to buy to get exactly 12 apples and 9 oranges?
-    - Aspect Tested:
-5. Rewrite the following paragraph in a professional, formal tone…
-    - Aspect Tested:
+1. **Explain the concept of object-oriented programming in simple terms to a complete beginner.**
+
+   - **Answer:** Sure! Imagine you're playing with toys. Each toy represents a different thing, like a car, a doll, or a robot. Each toy has its own characteristics (like color, size, or shape) and actions it can do (like moving, talking, or shooting).
+
+     Now, in the world of programming, especially in something called object-oriented programming (OOP), we can think of these toys as "objects."
+
+     Here are the basic ideas:
+
+     1. **Objects**: Just like your toys, in programming, an object is something that has properties (like color or size) and can perform actions (like moving or talking).
+
+     2. **Classes**: A class is like a blueprint for creating these objects. If you decide to create a toy car, the class would describe all the features of a toy car (like it has wheels, can go fast, etc.). Each individual car you make using this class is an object.
+
+     3. **Encapsulation**: This means keeping the important parts of an object safe and hidden away, while providing a way to interact with the object. For example, you can drive your toy car, but you don't need to know how the wheels are built to make it go.
+
+     4. **Inheritance**: This is like getting traits from your parents. If you have a class for a general toy, you can create a toy car class that inherits properties from the toy class, but also adds extra features specific to cars, like having wheels and an engine.
+
+     5. **Polymorphism**: This fancy word means that different objects can be treated as if they're the same type, even if they do things differently. For example, you could have a toy car and a toy robot. You can ask both of them to "move," but they move in their very own ways.
+
+     In summary, object-oriented programming is about creating organized structures (like your toys) that help programmers design and manage code in a way that's easy to understand and use, just like how you can easily play with different types of toys because you know how they work!
+
+   - **Aspect Tested:** Ability to explain complex technical concepts using simple analogies and clear structure
+
+2. **Read the following paragraph and provide a concise summary of the key points…**
+
+   - **Answer:** The paragraph explains the concept of object-oriented programming (OOP) using toys as a metaphor. Key points include:
+
+     1. **Objects**: Items with properties (like color and size) and actions (like moving).
+     2. **Classes**: Blueprints for creating objects with defined features.
+     3. **Encapsulation**: Protecting an object's inner workings while allowing interaction.
+     4. **Inheritance**: Creating new classes that inherit traits from existing classes.
+     5. **Polymorphism**: Treating different objects as the same type, allowing them to perform actions in their unique ways.
+
+     Overall, OOP organizes code similarly to how toys can be easily understood and played with based on their characteristics.
+
+   - **Aspect Tested:** Reading comprehension and summarization skills
+3. **Write a short, imaginative story (100–150 words) about a robot finding friendship in an unexpected place.**
+
+   - **Answer:** In a bustling city filled with gleaming towers, a lonely robot named Zeke roamed the streets. His metal heart yearned for connection, but the humans rushed past, oblivious to his gentle beeping. One day, while exploring an abandoned park overtaken by weeds, Zeke stumbled upon a tiny, rusted toy dog lying forlornly among the rubble.
+
+     Curious, he picked it up and examined it closely. With a few gentle adjustments, he activated its worn-out voice box. "Bark!" it exclaimed, the sound bittersweet yet filled with spirit. Zeke felt a spark of joy. He repaired the little dog, naming it Sparky. Together, they trekked through the park, sharing laughter and adventures, their friendship blossoming.
+
+     As the sun set, Zeke realized that sometimes, companionship comes from the most unexpected places. In Sparky, he found not just a friend, but a reason to smile amid the chaos of the city.
+
+   - **Aspect Tested:** Creative writing and storytelling ability
+4. **If a store sells apples in packs of 4 and oranges in packs of 3, how many packs of each do I need to buy to get exactly 12 apples and 9 oranges?**
+
+   - **Answer:** To find out how many packs of apples and oranges you need to buy, you can divide the total number of fruits by the number of fruits in each pack.
+
+     1. For apples:
+        - You need 12 apples.
+        - Apples are sold in packs of 4.
+        - So, you would need \( \frac{12}{4} = 3 \) packs of apples.
+
+     2. For oranges:
+        - You need 9 oranges.
+        - Oranges are sold in packs of 3.
+        - So, you would need \( \frac{9}{3} = 3 \) packs of oranges.
+
+     In summary, you need to buy 3 packs of apples and 3 packs of oranges to get exactly 12 apples and 9 oranges.
+
+   - **Aspect Tested:** Basic mathematical reasoning and problem-solving
+5. **Rewrite the following paragraph in a professional, formal tone…**
+
+   - **Answer:** To determine the number of packs of apples and oranges required for purchase, it is necessary to divide the total quantity of each fruit by the number of fruits contained within each respective pack.
+
+     1. Concerning apples:
+        - The required quantity is 12 apples.
+        - Apples are available in packs of 4.
+        - Therefore, the calculation is \( \frac{12}{4} = 3 \) packs of apples.
+
+     2. Regarding oranges:
+        - The required quantity is 9 oranges.
+        - Oranges are sold in packs of 3.
+        - Consequently, the calculation yields \( \frac{9}{3} = 3 \) packs of oranges.
+
+     In conclusion, it is necessary to acquire 3 packs of apples and 3 packs of oranges to ensure the procurement of exactly 12 apples and 9 oranges.
+
+   - **Aspect Tested:** Writing style adaptation and tone adjustment
 
 #### ❓Question #1:
 
 Do the answers appear to be correct and useful?
 ##### ✅ Answer:
+Yes, all five answers appear to be correct and useful. Each response demonstrates the system's ability to handle different types of tasks effectively:
+
+1. **Technical explanation**: The OOP explanation uses clear analogies and logical structure
+2. **Summarization**: Accurately captures key concepts in a concise format
+3. **Creative writing**: Produces an engaging story within the specified word count with proper narrative elements
+4. **Mathematical reasoning**: Provides correct calculations with clear step-by-step explanations
+5. **Style adaptation**: Successfully transforms casual language into formal, professional tone while maintaining accuracy
+
+The responses show the system can handle diverse cognitive tasks spanning technical education, comprehension, creativity, problem-solving, and communication style adaptation.
 
 ---
 
