@@ -13,6 +13,20 @@ def cosine_similarity(vector_a: np.array, vector_b: np.array) -> float:
     return dot_product / (norm_a * norm_b)
 
 
+def euclidean_distance(vector_a: np.array, vector_b: np.array) -> float:
+    """Computes the negative Euclidean distance between two vectors.
+    Returns negative value so higher scores indicate better similarity."""
+    distance = np.linalg.norm(vector_a - vector_b)
+    return -distance
+
+
+def manhattan_distance(vector_a: np.array, vector_b: np.array) -> float:
+    """Computes the negative Manhattan distance between two vectors.
+    Returns negative value so higher scores indicate better similarity."""
+    distance = np.sum(np.abs(vector_a - vector_b))
+    return -distance
+
+
 class VectorDatabase:
     def __init__(self, embedding_model: EmbeddingModel = None):
         self.vectors = defaultdict(np.array)
