@@ -1,6 +1,11 @@
 import os
 from typing import List
 
+try:
+    import fitz  # PyMuPDF
+except ImportError:
+    fitz = None
+
 
 class TextFileLoader:
     def __init__(self, path: str, encoding: str = "utf-8"):
@@ -30,6 +35,33 @@ class TextFileLoader:
                         os.path.join(root, file), "r", encoding=self.encoding
                     ) as f:
                         self.documents.append(f.read())
+
+    def load_documents(self):
+        self.load()
+        return self.documents
+
+
+class PDFFileLoader:
+    def __init__(self, path: str):
+        if fitz is None:
+            raise ImportError("PyMuPDF is required for PDF loading. Install with: pip install pymupdf")
+
+        self.documents = []
+        self.path = path
+
+    def load(self):
+        if os.path.isfile(self.path) and self.path.endswith(".pdf"):
+            self.load_file()
+        else:
+            raise ValueError("Provided path is not a valid .pdf file.")
+
+    def load_file(self):
+        doc = fitz.open(self.path)
+        text = ""
+        for page in doc:
+            text += page.get_text()
+        doc.close()
+        self.documents.append(text)
 
     def load_documents(self):
         self.load()
