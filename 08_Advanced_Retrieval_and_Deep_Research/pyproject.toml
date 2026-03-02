@@ -12,7 +12,7 @@ dependencies = [
     # Notebook 1: Advanced Retrieval
     "langchain>=0.3.19",
     "langchain-experimental>=0.3.4",
-    "langchain-cohere==0.4.4",
+    "langchain-cohere>=0.3.5",
     "cohere>=5.12.0,<5.13.0",
     "langchain-openai>=0.3.28",
     "python-dotenv>=1.0.1",
@@ -20,7 +20,6 @@ dependencies = [
     "rank-bm25>=0.2.2",
     "langchain-qdrant>=0.2.0",
     # Notebook 2: Deep Agents
-    "deepagents>=0.3.0",
     "langchain-anthropic>=0.3.15",
     "pyyaml>=6.0",
     "nest-asyncio>=1.5.0",
@@ -48,14 +47,18 @@ dependencies = [
     "pypdf>=6.1.1",
     "pypdf2>=3.0.1",
     "pandas>=2.3.1",
+    # Evaluation
+    "ragas>=0.1.0",
+    "datasets>=2.0.0",
     # Shared
     "jupyter>=1.1.1",
     "ipykernel>=6.29.5",
+    "deepagents>=0.0.5",
 ]
 
 [project.optional-dependencies]
 cli = [
-    "deepagents-cli>=0.0.15",
+    # "deepagents-cli>=0.0.15",  # Temporarily disabled due to langchain-core version conflict
 ]
 dev = [
     "pytest>=7.0.0",
