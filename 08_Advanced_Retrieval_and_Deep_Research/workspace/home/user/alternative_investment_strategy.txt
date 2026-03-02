@@ -1,0 +1,43 @@
+### Alternative Investment Strategy
+
+**Objective**: Diversify portfolio by integrating alternative investments for improved risk-adjusted returns and reduced correlation to traditional markets.
+
+#### Current Portfolio Allocation
+- **Equities**: 60%
+- **Bonds**: 30%
+- **Cash**: 10%
+
+#### Proposed Changes
+- **Equities**: Decrease to 55%
+- **Bonds**: Decrease to 25%
+- **Cash**: Decrease to 5%
+- **Alternatives**: Introduce at 15%
+
+#### Breakdown of Alternative Investments
+1. **Reinsurance (5%)**
+   - Objective: Diversification & yield enhancement.
+   - Considerations: Non-correlated returns, moderate risk.
+
+2. **Private Equity (6%)**
+   - Objective: High returns & access to private markets.
+   - Considerations: Long-term lock-up, illiquidity.
+
+3. **Hedge Funds (4%)**
+   - Objective: Risk management & absolute returns.
+   - Considerations: Manager selection, fees.
+
+4. **Real Assets (3%)**
+   - Objective: Income & inflation protection.
+   - Considerations: Capital appreciation, medium to long-term horizon.
+
+### Implementation Steps
+- **Reallocate funds**: Gradually shift from traditional assets to alternatives.
+- **Due Diligence**: Research and select funds/managers with strong track records.
+- **Monitor & Review**: Regularly review the performance and adjust allocations as needed.
+
+### Risk Considerations
+- Liquidity risk due to long lock-up periods, especially in private equity and real assets.
+- Higher fees in hedge funds relative to traditional investments.
+- Regulatory and market risks particular to alternative investments.
+
+This strategy aims to enhance the portfolio's long-term performance while balancing risk exposure through diversification into alternative investments.
