@@ -1,4 +1,4 @@
-# Module 15: 🚢 Agent Servers
+# Module 13: 🚢 Agent Servers
 
 🎯 Learn to deploy complex agent applications to production endpoints that you can use elsewhere.
 
