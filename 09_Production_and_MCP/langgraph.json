@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "dependencies": ["."],
+  "env": ".env",
+  "python_version": "3.13",
+  "graphs": {
+    "investment_assistant": "app.agent:graph"
+  }
+}
