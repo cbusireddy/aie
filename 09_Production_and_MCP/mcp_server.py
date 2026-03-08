@@ -267,6 +267,93 @@ def search_investor_letter(query: str, section: str = "all") -> str:
     return f"Found matches in {len(results)} section(s):\n\n" + "\n\n---\n\n".join(results)
 
 
+@mcp.tool()
+def compare_funds(fund_a: str, fund_b: str) -> str:
+    """Compare two Stone Ridge funds side-by-side.
+
+    Args:
+        fund_a: First fund to compare (SRE, Bitcoin, Reinsurance, Longtail Re)
+        fund_b: Second fund to compare (SRE, Bitcoin, Reinsurance, Longtail Re)
+    """
+    # Get fund information
+    key_a = fund_a.strip().lower()
+    key_b = fund_b.strip().lower()
+
+    fund_info_a = FUNDS.get(key_a)
+    fund_info_b = FUNDS.get(key_b)
+
+    # Fuzzy match if exact key not found
+    if fund_info_a is None:
+        for k, v in FUNDS.items():
+            if key_a in k or key_a in v["name"].lower():
+                fund_info_a = v
+                key_a = k
+                break
+
+    if fund_info_b is None:
+        for k, v in FUNDS.items():
+            if key_b in k or key_b in v["name"].lower():
+                fund_info_b = v
+                key_b = k
+                break
+
+    if fund_info_a is None:
+        return f"Fund '{fund_a}' not found. Available funds: " + ", ".join(f["name"] for f in FUNDS.values())
+
+    if fund_info_b is None:
+        return f"Fund '{fund_b}' not found. Available funds: " + ", ".join(f["name"] for f in FUNDS.values())
+
+    if key_a == key_b:
+        return f"Both funds refer to the same strategy: {fund_info_a['name']}"
+
+    # Build comparison table
+    comparison = [
+        f"# Stone Ridge Fund Comparison: {fund_info_a['name']} vs {fund_info_b['name']}\n",
+        "| Aspect | Fund A | Fund B |",
+        "|--------|--------|--------|",
+        f"| **Name** | {fund_info_a['name']} | {fund_info_b['name']} |",
+        "",
+        "## Fund A Overview",
+        fund_info_a['overview'],
+        "",
+        "**Key Themes:**",
+    ]
+
+    for theme in fund_info_a['key_themes']:
+        comparison.append(f"- {theme}")
+
+    comparison.extend([
+        "",
+        "## Fund B Overview",
+        fund_info_b['overview'],
+        "",
+        "**Key Themes:**",
+    ])
+
+    for theme in fund_info_b['key_themes']:
+        comparison.append(f"- {theme}")
+
+    comparison.extend([
+        "",
+        "## Stone Ridge Perspective",
+        "Both strategies align with Stone Ridge's core philosophy of harvesting independent risk premiums:",
+        "",
+        f"- **{fund_info_a['name'].split()[2] if len(fund_info_a['name'].split()) > 2 else 'Fund A'}**: Represents " +
+        ("physical catastrophe risk diversification" if "reinsurance" in key_a.lower() or "longtail" in key_a.lower()
+         else "non-sovereign monetary asset allocation" if "bitcoin" in key_a.lower()
+         else "alternative risk premium harvesting"),
+        "",
+        f"- **{fund_info_b['name'].split()[2] if len(fund_info_b['name'].split()) > 2 else 'Fund B'}**: Represents " +
+        ("physical catastrophe risk diversification" if "reinsurance" in key_b.lower() or "longtail" in key_b.lower()
+         else "non-sovereign monetary asset allocation" if "bitcoin" in key_b.lower()
+         else "alternative risk premium harvesting"),
+        "",
+        "Both strategies demonstrate Stone Ridge's commitment to Bayesian diversification across truly independent return drivers."
+    ])
+
+    return "\n".join(comparison)
+
+
 # ---------------------------------------------------------------------------
 # Entry point
 # ---------------------------------------------------------------------------
