@@ -17,7 +17,7 @@ from uuid import uuid4
 
 import requests
 import tiktoken
-from langchain_anthropic import ChatAnthropic
+from langchain_openai import ChatOpenAI
 from langchain_community.document_loaders import DirectoryLoader, PyMuPDFLoader
 from langchain_community.tools.arxiv.tool import ArxivQueryRun
 from langchain_tavily import TavilySearch
@@ -57,8 +57,8 @@ When answering questions:
 Key Stone Ridge themes: Bayesian investing, reinsurance, energy assets, \
 bitcoin allocation, longtail risk, and alternative asset management."""
 
-DEFAULT_MODEL = "claude-sonnet-4-20250514"
-EVAL_MODEL = "claude-haiku-4-5-20251001"
+DEFAULT_MODEL = "gpt-4o"
+EVAL_MODEL = "gpt-4o-mini"
 
 # Investment-domain guardrails topics
 VALID_TOPICS = [
@@ -95,13 +95,13 @@ def get_chat_model(
     *,
     temperature: float = 0,
     max_tokens: int | None = None,
-) -> ChatAnthropic:
-    """Return a configured ChatAnthropic instance."""
-    name = model_name or os.environ.get("ANTHROPIC_MODEL", DEFAULT_MODEL)
+) -> ChatOpenAI:
+    """Return a configured ChatOpenAI instance."""
+    name = model_name or os.environ.get("OPENAI_MODEL", DEFAULT_MODEL)
     kwargs: Dict[str, Any] = {"model": name, "temperature": temperature}
     if max_tokens is not None:
         kwargs["max_tokens"] = max_tokens
-    return ChatAnthropic(**kwargs)
+    return ChatOpenAI(**kwargs)
 
 
 # ---------------------------------------------------------------------------
@@ -625,3 +625,31 @@ def build_graph():
 
 
 graph = build_graph().compile()
+
+
+# ---------------------------------------------------------------------------
+# 12. Simple Graph (without guardrails and helpfulness)
+# ---------------------------------------------------------------------------
+
+
+def build_simple_graph():
+    """Build a simplified investment assistant graph without guardrails and helpfulness."""
+    tool_node = ToolNode(get_tool_belt())
+
+    g = StateGraph(AgentState)
+    g.add_node("agent", agent)
+    g.add_node("action", tool_node)
+
+    g.set_entry_point("agent")
+
+    g.add_conditional_edges(
+        "agent",
+        route_after_agent,
+        {"action": "action", "output_guardrail": END},  # Route to END instead of guardrail
+    )
+    g.add_edge("action", "agent")
+
+    return g
+
+
+simple_graph = build_simple_graph().compile()
