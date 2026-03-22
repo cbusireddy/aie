@@ -110,7 +110,7 @@ def get_chat_model(
 
 
 class CacheBackedEmbeddings:
-    """Production cache-backed embeddings using OpenAI."""
+    """Production cache-backed embeddings using OpenAI with simple dict cache."""
 
     def __init__(
         self,
@@ -118,18 +118,35 @@ class CacheBackedEmbeddings:
         cache_dir: str = "./cache/embeddings",
         batch_size: int = 32,
     ):
-        from langchain.embeddings import CacheBackedEmbeddings as _LCCached
-        from langchain.storage import LocalFileStore
-
         self.base_embeddings = OpenAIEmbeddings(model=model)
-        safe_namespace = hashlib.md5(model.encode()).hexdigest()
-        store = LocalFileStore(cache_dir)
-        self.cached_embeddings = _LCCached.from_bytes_store(
-            self.base_embeddings, store, namespace=safe_namespace, batch_size=batch_size
-        )
+        self._cache = {}  # Simple in-memory cache
 
     def get_embeddings(self):
-        return self.cached_embeddings
+        """Return a wrapper that caches embeddings."""
+        class CachedEmbeddings:
+            def __init__(self, base_embeddings, cache):
+                self.base_embeddings = base_embeddings
+                self.cache = cache
+
+            def embed_query(self, text: str):
+                if text in self.cache:
+                    return self.cache[text]
+                result = self.base_embeddings.embed_query(text)
+                self.cache[text] = result
+                return result
+
+            def embed_documents(self, texts: list):
+                results = []
+                for text in texts:
+                    if text in self.cache:
+                        results.append(self.cache[text])
+                    else:
+                        result = self.base_embeddings.embed_query(text)
+                        self.cache[text] = result
+                        results.append(result)
+                return results
+
+        return CachedEmbeddings(self.base_embeddings, self._cache)
 
 
 def setup_llm_cache(cache_type: str = "memory", cache_path: str | None = None):
